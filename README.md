@@ -5,9 +5,14 @@ Desafio proposto em [Desafio Técnico: Performance e Análise de Dados via API](
 ## Objetivo
 Criar uma API que recebe um arquivo JSON com 100.000 usuários e oferece endpoints performáticos e bem estruturados para análise dos dados.
 
-## Testando a solução
+## Testando a solução em NodeJS
 
-Inicie o servidor feito em NodeJs
+Instale as dependências
+```
+$cd nodejs && npm install
+```
+
+Inicie o servidor feito em Express
 ```
 $npm run start
 Server is running on http://localhost:8000
@@ -27,6 +32,25 @@ response status:  200  content:  {
     '/active-users-per-day': { response: [Array], execution_time_ms: 58 }
   }
 }
+```
+
+## Testando a solução em Python
+
+Instale as dependências
+```
+$cd python && python -m venv venv
+$pip install -r requirements.txt
+```
+
+Inicie o servidor feito em FastAPI
+```
+$fastapi run app.py
+```
+
+Execute o script para fazer o teste de requisições
+```
+$python send_requests.py
+
 ```
 
 ## Requisitos Técnicos
